@@ -1,7 +1,7 @@
 // script.js
 
 // ステップ1でコピーしたウェブアプリのURLをここに貼り付けます
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbyuCRdmxS5gNtEY32kZlPMl78PJlBsaqDyvfsKmQ93JXM-BGdUAyLlXNOlVJSErHN1w/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyRMc1hkoXq-D_GUp9YIl84HNtrQnzdVZtQiHlC-1PH4kWhDrp9YmlESIor9KmBpc46/exec';
 
 // 難易度の数値を日本語に変換するための対応表
 const difficultyMap = {
@@ -80,4 +80,5 @@ function displayRanking(data, difficulty, elementId) {
     container.innerHTML = html;
 
 }
+
 
