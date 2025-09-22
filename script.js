@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ▼▼▼ 【重要】ここに、デプロイしたApps ScriptのURLを貼り付け ▼▼▼
-    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyuCRdmxS5gNtEY32kZlPMl78PJlBsaqDyvfsKmQ93JXM-BGdUAyLlXNOlVJSErHN1w/exec';
+    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyRMc1hkoXq-D_GUp9YIl84HNtrQnzdVZtQiHlC-1PH4kWhDrp9YmlESIor9KmBpc46/exec';
 
     // === DOM要素の取得 ===
     const pages = document.querySelectorAll('.page');
@@ -214,4 +214,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // === 初期化処理 ===
     updateRankingDisplay();
     showPage('top-page');
+
 });
