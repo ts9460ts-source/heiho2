@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // ▼▼▼ 【重要】ここに、新しくデプロイしたApps ScriptのURLを貼り付け ▼▼▼
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwi_48-akMeN0CnZ6-Wt-703C6oq59lZ9gTkD0cBnjdwXpjXKYgJ8OlTC_peE49MyA/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxOIkWI6ZhpflPwm016cfYyUNdZx5f7QL2HgzAHTSTX1Hc7T1n8eHgve_MulkKDxTo/exec';
     const container = document.querySelector('.container');
 
     /**
