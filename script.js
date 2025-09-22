@@ -214,6 +214,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // === 初期化処理 ===
     updateRankingDisplay();
     showPage('top-page');
-
 });
-
