@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平方完成スピードスター</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <div id="top-page" class="page active">
+            <h1>平方完成スピードスター</h1>
+            <p>計算スキルを「体で覚える」トレーニングジム</p>
+            <p>難易度が高い方が高スコア！１回10問！</p>
+            <input type="text" id="nickname-input" placeholder="ニックネームを入力">
+            <div id="difficulty-selector">
+                <button class="difficulty-btn" data-level="1">かんたん</button>
+                <button class="difficulty-btn" data-level="2">ふつう</button>
+                <button class="difficulty-btn" data-level="3">むずかしい</button>
+                <button class="difficulty-btn" data-level="4">鬼</button>
+            </div>
+            <button id="view-ranking-btn-top" class="ranking-btn">ランキングを表示</button>
+            <div id="ranking-preview">
+                <h2>🏆 ハイスコア 🏆</h2>
+                <div id="ranking-display">
+                    </div>
+            </div>
+        </div>
+
+        <div id="game-page" class="page">
+            <div id="game-header">
+                <p>Time: <span id="timer">0.00</span>s</p>
+                <p>Q.<span id="question-number">1</span>/10</p>
+            </div>
+            <div id="question-area">
+                <p id="question-text"></p>
+            </div>
+            <div id="options-area"></div>
+            <div id="feedback-area">
+                <p id="feedback-text"></p>
+            </div>
+        </div>
+
+        <div id="result-page" class="page">
+            <h2>結果発表</h2>
+            <p>ニックネーム: <span id="result-nickname"></span></p>
+            <p>タイム: <span id="result-time"></span>秒</p>
+            <p>正解数: <span id="result-correct"></span> / 10</p>
+            <p>スコア: <strong id="result-score"></strong></p>
+            <div id="result-submission">
+                <button id="submit-score-btn">スコアを送信する</button>
+                <p id="submit-status"></p>
+            </div>
+            <div class="result-actions">
+                <button id="retry-btn">もう一度挑戦</button>
+                <button id="back-to-top-btn">トップへ戻る</button>
+                <button id="view-ranking-btn-result" class="ranking-btn">ランキングを表示</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
