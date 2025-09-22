@@ -47,12 +47,12 @@ function displayRanking(data, difficulty, elementId) {
     // 難易度でデータを絞り込む (difficultyがnullの場合は全データを使用)
     const filteredData = difficulty ? data.filter(item => item.difficulty == difficulty) : data;
 
-    // スコアの高い順に並び替え、上位5件を取得
+    // スコアの高い順に並び替え、上位10件を取得
     const top10 = filteredData.sort((a, b) => b.score - a.score).slice(0, 10);
 
     // 表示先のHTML要素を取得
     const container = document.getElementById(elementId);
-    if (top5.length === 0) {
+    if (top10.length === 0) {
         container.innerHTML = '<p>データがまだありません。</p>';
         return;
     }
@@ -80,3 +80,4 @@ function displayRanking(data, difficulty, elementId) {
     container.innerHTML = html;
 
 }
+
