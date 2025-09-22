@@ -48,7 +48,7 @@ function displayRanking(data, difficulty, elementId) {
     const filteredData = difficulty ? data.filter(item => item.difficulty == difficulty) : data;
 
     // スコアの高い順に並び替え、上位5件を取得
-    const top5 = filteredData.sort((a, b) => b.score - a.score).slice(0, 5);
+    const top10 = filteredData.sort((a, b) => b.score - a.score).slice(0, 10);
 
     // 表示先のHTML要素を取得
     const container = document.getElementById(elementId);
@@ -59,7 +59,7 @@ function displayRanking(data, difficulty, elementId) {
 
     // ランキングテーブルのHTMLを生成
     let html = '<table><tr><th>順位</th><th>ニックネーム</th><th>スコア</th><th>月日</th></tr>';
-    top5.forEach((item, index) => {
+    top10.forEach((item, index) => {
         const date = new Date(item.timestamp);
         const month = date.getMonth() + 1;
         const day = date.getDate();
@@ -78,4 +78,5 @@ function displayRanking(data, difficulty, elementId) {
 
     // 生成したHTMLをページに表示
     container.innerHTML = html;
+
 }
