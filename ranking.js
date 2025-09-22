@@ -1,7 +1,7 @@
 // script.js
 
 // ステップ1でコピーしたウェブアプリのURLをここに貼り付けます
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbxcLxyojtTr0Cx7ZyVJLbHq0X_E6fw5R2qe2F3YIcJs7qok5bkfwT2l4R843_YYdcN4/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyuCRdmxS5gNtEY32kZlPMl78PJlBsaqDyvfsKmQ93JXM-BGdUAyLlXNOlVJSErHN1w/exec';
 
 // 難易度の数値を日本語に変換するための対応表
 const difficultyMap = {

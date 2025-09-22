@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ▼▼▼ 【重要】ここに、デプロイしたApps ScriptのURLを貼り付け ▼▼▼
-    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxcLxyojtTr0Cx7ZyVJLbHq0X_E6fw5R2qe2F3YIcJs7qok5bkfwT2l4R843_YYdcN4/exec';
+    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyuCRdmxS5gNtEY32kZlPMl78PJlBsaqDyvfsKmQ93JXM-BGdUAyLlXNOlVJSErHN1w/exec';
 
     // === DOM要素の取得 ===
     const pages = document.querySelectorAll('.page');
