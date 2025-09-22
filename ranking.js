@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // ▼▼▼ 【重要】ここに、デプロイしたApps ScriptのURLを貼り付け ▼▼▼
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaiMc39zAu2qjdPW1z2k54folOzgImhAbuYdoaPAQ0a8YzusUoPR2LdGsPYxLvo4TD/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXBnmMRbAFNA50m-NmoFkmFyOQcghp8MIQVsfOMBdkGpSS1aZfOJZf_wfALNxNOtu1/exec';
 
     /**
      * 指定された場所にランキングのHTMLテーブルを生成する関数
