@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Apps Script CORS Test</title>
+</head>
+<body>
+    <h1>Apps Scriptの接続テスト中...</h1>
+    <p>結果は、開発者ツール（F12キー）の「コンソール」を確認してください。</p>
+    <div id="result"></div>
+
+    <script>
+        // ▼▼▼ ここに、上記ステップ2でコピーした新しいURLを貼り付け ▼▼▼
+        const TEST_URL = 'https://script.google.com/macros/s/AKfycbz6UALC8DXW4AR6T7iNsCcfFB2iziqwBpx7F92bWMvDtPQWMxnKBkmRx2vUseZWDdAZ/exec';
+
+        async function runTest() {
+            const resultDiv = document.getElementById('result');
+            try {
+                const response = await fetch(TEST_URL);
+                if (!response.ok) {
+                    throw new Error(`ネットワークエラー: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                console.log('SUCCESS:', data);
+                resultDiv.innerHTML = '<h2 style="color: green;">テスト成功！コンソールにメッセージが表示されました。</h2>';
+
+            } catch (error) {
+                console.error('ERROR:', error);
+                resultDiv.innerHTML = '<h2 style="color: red;">テスト失敗。コンソールにCORSエラーが表示されました。</h2>';
+            }
+        }
+        runTest();
+    </script>
+</body>
+</html>
