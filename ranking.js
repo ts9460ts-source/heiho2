@@ -82,3 +82,4 @@ function displayRanking(data, difficulty, elementId) {
 }
 
 
+
