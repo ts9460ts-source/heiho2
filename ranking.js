@@ -1,8 +1,7 @@
-// ranking.js (HTML構造に合わせた最終修正版)
-
 document.addEventListener('DOMContentLoaded', () => {
     // ▼▼▼ 【重要】ここに、新しくデプロイしたApps ScriptのURLを貼り付け ▼▼▼
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxOIkWI6ZhpflPwm016cfYyUNdZx5f7QL2HgzAHTSTX1Hc7T1n8eHgve_MulkKDxTo/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwPjkOX9eWzoXPboFQgsmYvgxh4MTAuVpWLTXpjKNtwjad_UnGL3v_1IhUhC7UVnknR/exec';
+    
     const container = document.querySelector('.container');
 
     /**
@@ -42,14 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 総合ランキング
             renderRanking(allScores.sort((a, b) => b.score - a.score).slice(0, 10), 'total-ranking');
-// 難易度別ランキング
-renderRanking(allScores.filter(item => item.difficulty == 1).sort((a, b) => b.score - a.score).slice(0, 10), 'easy-ranking');
-renderRanking(allScores.filter(item => item.difficulty == 2).sort((a, b) => b.score - a.score).slice(0, 10), 'normal-ranking');
-renderRanking(allScores.filter(item => item.difficulty == 3).sort((a, b) => b.score - a.score).slice(0, 10), 'hard-ranking');
-renderRanking(allScores.filter(item => item.difficulty == 4).sort((a, b) => b.score - a.score).slice(0, 10), 'oni-ranking');
+            
+            // 難易度別ランキング
+            renderRanking(allScores.filter(item => item.difficulty == 1).sort((a, b) => b.score - a.score).slice(0, 10), 'easy-ranking');
+            renderRanking(allScores.filter(item => item.difficulty == 2).sort((a, b) => b.score - a.score).slice(0, 10), 'normal-ranking');
+            renderRanking(allScores.filter(item => item.difficulty == 3).sort((a, b) => b.score - a.score).slice(0, 10), 'hard-ranking');
+            renderRanking(allScores.filter(item => item.difficulty == 4).sort((a, b) => b.score - a.score).slice(0, 10), 'oni-ranking');
+
         } catch (error) {
             console.error('ランキングの取得または表示に失敗しました:', error);
-            // エラーメッセージをコンテナ全体に表示
             container.innerHTML = '<p style="color: red; text-align: center;">データの読み込みに失敗しました。Apps Scriptのデプロイ設定を確認してください。</p>';
         }
     }
