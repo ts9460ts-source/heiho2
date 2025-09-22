@@ -43,10 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // 総合ランキング
             renderRanking(allScores.slice(0, 10), 'total-ranking');
             // 難易度別ランキング
-            renderRanking(allScores.filter(item => item.level == 1).slice(0, 10), 'easy-ranking');
-            renderRanking(allScores.filter(item => item.level == 2).slice(0, 10), 'normal-ranking');
-            renderRanking(allScores.filter(item => item.level == 3).slice(0, 10), 'hard-ranking');
-            renderRanking(allScores.filter(item => item.level == 4).slice(0, 10), 'oni-ranking');
+            // 難易度別ランキング
+renderRanking(allScores.filter(item => item.difficulty == 1).slice(0, 10), 'easy-ranking');
+renderRanking(allScores.filter(item => item.difficulty == 2).slice(0, 10), 'normal-ranking');
+renderRanking(allScores.filter(item => item.difficulty == 3).slice(0, 10), 'hard-ranking');
+renderRanking(allScores.filter(item => item.difficulty == 4).slice(0, 10), 'oni-ranking');
 
         } catch (error) {
             console.error('ランキングの取得または表示に失敗しました:', error);
